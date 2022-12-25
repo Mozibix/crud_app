@@ -1,23 +1,29 @@
 import React from "react";
-import "../styles/navbar.scss";
 
-export const NavBar = () => {
+export const Navbar = () => {
   return (
-    <>
-      <div className="navbar">
-        <div className="navbar_inner">
-          <div className="logo">
-            <p>Iyanex</p>
-          </div>
-          <ul>
-            <li>Home</li>
-            <li>Blog</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-          <button>Sign Up</button>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#!">
+          CRUD APP
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarColor01">
+          <ul className="navbar-nav me-auto"></ul>
+
+          <button className="btn btn-outline-seconda my-2 my-sm-0">Create Employee</button>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
