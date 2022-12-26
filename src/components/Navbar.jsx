@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
@@ -21,7 +23,12 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarColor01">
           <ul className="navbar-nav me-auto"></ul>
 
-          <button className="btn btn-outline-seconda my-2 my-sm-0">Create Employee</button>
+          <button
+            className="btn btn-outline-seconda my-sm-0"
+            onClick={() => navigate("/create-employee")}
+          >
+            Create Employee
+          </button>
         </div>
       </div>
     </nav>
