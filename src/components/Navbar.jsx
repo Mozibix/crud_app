@@ -9,22 +9,10 @@ export const Navbar = () => {
         <a className="navbar-brand" href="#!">
           CRUD APP
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarColor01">
-          <ul className="navbar-nav me-auto"></ul>
 
+        <div id="navbarColor01">
           <button
-            className="btn btn-outline-seconda my-sm-0"
+            className="btn btn-outline-secondary"
             onClick={() => navigate("/create-employee")}
           >
             Create Employee
