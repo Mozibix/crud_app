@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { EmployeeItem } from "./EmployeeItem";
 import { getListOfEmployees } from "./../services/localstorage";
+import { EmployeeItem } from './EmployeeItem';
 
 export const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
@@ -10,7 +10,7 @@ export const EmployeeList = () => {
   }, []);
   return (
     <div>
-      <h1 className="my-5 text-center">Manage Employees</h1>
+      <h1 className="my-5 text-center">Manage Orders</h1>
       {employees.length > 0 ? (
         <div className="card bg-secondary p-3">
           <table className="table table-hover">
@@ -19,7 +19,7 @@ export const EmployeeList = () => {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
-                <th>Phone</th>
+                <th>Nail-Type</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -36,7 +36,7 @@ export const EmployeeList = () => {
           </table>
         </div>
       ) : (
-        <h3 className="text-center">No employees</h3>
+        <h3 className="text-center">No Orders</h3>
       )}
     </div>
   );

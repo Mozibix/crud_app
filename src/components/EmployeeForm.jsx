@@ -15,7 +15,7 @@ export const EmployeeForm = () => {
     name: "",
     email: "",
     address: "",
-    phone: "",
+    nail: "",
   });
 
   useEffect(() => {
@@ -40,19 +40,19 @@ export const EmployeeForm = () => {
       <div>
         <div>
           <button
-            className="btn-lg p-2 my-1.5 w-25 rounded-pill btn-outline-secondary"
-            onClick={() => navigate("/")}
+            className="btn-lg text-white bg-dark p-2 my-1.5 w-25 rounded-pill btn-outline-secondary"
+            onClick={() => navigate("/employee-list")}
           >
             Back
           </button>
-          <h1 className="text-center">{id ? "Edit" : "Create"} Employee</h1>
+          <h1 className="text-center">{id ? "Edit" : "Create"} Order</h1>
         </div>
         {showAlert && (
           <div>
             <div className="alert alert-success text-white" role="alert">
               {id
-                ? "Hurray! Employee update successful"
-                : "well done! added a new employee"}{" "}
+                ? "Hurray! Order updated successful"
+                : "well done! successfully added a new order"}{" "}
               .
             </div>
           </div>
@@ -105,23 +105,23 @@ export const EmployeeForm = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="phone" className="form-label mt-1">
-                Phone
+              <label htmlFor="nail" className="form-label mt-1">
+                Nail Type
               </label>
               <input
                 type="text"
-                name="phone"
-                value={inputValues.phone}
+                name="nail"
+                value={inputValues.nail}
                 onChange={handleInputChange}
                 className="form-control"
-                id="phone"
-                placeholder="Enter phone"
+                id="nail"
+                placeholder="Enter nail-type"
                 required
               />
             </div>
             <div className="d-grid gap-2 mt-3">
               <button type="submit" className="btn btn-outline-primary">
-                Add employee
+                Add Order 
               </button>
             </div>
           </form>

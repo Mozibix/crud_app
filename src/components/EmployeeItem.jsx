@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { deleteEmployee, getListOfEmployees } from "./../services/localstorage";
 
 export const EmployeeItem = ({ employee, setEmployees }) => {
-  const { id, name, email, address, phone } = employee;
+  const { id, name, email, address, nail } = employee;
   const navigate = useNavigate();
 
   const removeEmployee = () => {
@@ -13,9 +13,9 @@ export const EmployeeItem = ({ employee, setEmployees }) => {
   return (
     <tr>
       <th>{name}</th>
-      <th>{email}</th> 
+      <th>{email}</th>
       <th>{address}</th>
-      <th>{phone}</th>
+      <th>{nail}</th>
 
       <th>
         <div className="d-flex gap-3">
